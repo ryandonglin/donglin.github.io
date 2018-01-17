@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Getting Start," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="First say Hello World通常惯例，我们学习的大部分程序语言基本上第一个程序都是Hello World。1echo &apos;Hello World!&apos; How to build your Hexo部署Hexo作为个人博客，可以参考的资料很多很多，推荐的是hexo的官方文档,里面有详尽的说明；建议有geek精神的小伙伴们多多参考官方文档学习。如果觉得阅读官方文档太繁琐，只想按照规则quic">
+<meta name="keywords" content="Getting Start">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Getting Started: Build your Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/01/04/Getting-Started-Build-your-Hexo/index.html">
+<meta property="og:site_name" content="Ryan&#39;s Blog">
+<meta property="og:description" content="First say Hello World通常惯例，我们学习的大部分程序语言基本上第一个程序都是Hello World。1echo &apos;Hello World!&apos; How to build your Hexo部署Hexo作为个人博客，可以参考的资料很多很多，推荐的是hexo的官方文档,里面有详尽的说明；建议有geek精神的小伙伴们多多参考官方文档学习。如果觉得阅读官方文档太繁琐，只想按照规则quic">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2018/01/04/Getting-Started-Build-your-Hexo/hexo-version.png">
+<meta property="og:updated_time" content="2018-01-04T01:42:53.053Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Getting Started: Build your Hexo">
+<meta name="twitter:description" content="First say Hello World通常惯例，我们学习的大部分程序语言基本上第一个程序都是Hello World。1echo &apos;Hello World!&apos; How to build your Hexo部署Hexo作为个人博客，可以参考的资料很多很多，推荐的是hexo的官方文档,里面有详尽的说明；建议有geek精神的小伙伴们多多参考官方文档学习。如果觉得阅读官方文档太繁琐，只想按照规则quic">
+<meta name="twitter:image" content="http://yoursite.com/2018/01/04/Getting-Started-Build-your-Hexo/hexo-version.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/01/04/Getting-Started-Build-your-Hexo/"/>
+
+
+
+
+
+  <title>Getting Started: Build your Hexo | Ryan's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ryan's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/04/Getting-Started-Build-your-Hexo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="dong lin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ryan's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Getting Started: Build your Hexo</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-04T09:18:10+08:00">
+                2018-01-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/04/Getting-Started-Build-your-Hexo/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/01/04/Getting-Started-Build-your-Hexo/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/01/04/Getting-Started-Build-your-Hexo/" class="leancloud_visitors" data-flag-title="Getting Started: Build your Hexo">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="First-say-Hello-World"><a href="#First-say-Hello-World" class="headerlink" title="First say Hello World"></a>First say Hello World</h1><p>通常惯例，我们学习的大部分程序语言基本上第一个程序都是<code>Hello World</code>。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'Hello World!'</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="How-to-build-your-Hexo"><a href="#How-to-build-your-Hexo" class="headerlink" title="How to build your Hexo"></a>How to build your Hexo</h1><p>部署<code>Hexo</code>作为个人博客，可以参考的资料很多很多，推荐的是hexo的<a href="https://hexo.io/docs/" target="_blank" rel="noopener">官方文档</a>,里面有详尽的说明；建议有geek精神的小伙伴们多多参考官方文档学习。<br>如果觉得阅读官方文档太繁琐，只想按照规则quick start的话，可以继续阅读本文档；</p>
+<h2 id="Prepare-work"><a href="#Prepare-work" class="headerlink" title="Prepare work"></a>Prepare work</h2><p>抛开待安装的操作系统，安装配置hexo前需要准备环境如下：</p>
+<blockquote>
+<ol>
+<li>Nodejs</li>
+<li>Git</li>
+</ol>
+</blockquote>
+<p>这两个基本环境的配置安装，如果有不熟悉的小伙伴，自行科学上网安装，主要说下这两个在部署Hexo中的作用：hexo的安装，以及后期运行过程中均需要nodejs的支持；git的主要用途是管理我们创建的hexo的网站文件。</p>
+<h2 id="Install-hexo-cli"><a href="#Install-hexo-cli" class="headerlink" title="Install hexo-cli"></a>Install hexo-cli</h2><p>完成安装nodejs和git后，Terminal终端运行 <code>npm install -g hexo-cli</code> 安装Hexo；安装完成后，Terminal运行命令 <code>hexo -v</code> 出现如下界面，即表示Hexo安装成功:<br><img src="/2018/01/04/Getting-Started-Build-your-Hexo/hexo-version.png" alt=""></p>
+<h2 id="Init-blog-directory"><a href="#Init-blog-directory" class="headerlink" title="Init blog directory"></a>Init blog directory</h2><p>成功完成hexo的cli安装后，需要在terminal执行 <code>hexo init myblog</code> 命令初始化我们的博客位置，示例中我们初始化的博客的位置为${ROOT_DIR}/myblog，执行完命令后，在myblog文件夹下我们会有如下内容：<br><figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── <span class="variable">_config</span>.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── <span class="variable">_drafts</span></span><br><span class="line">|   └── <span class="variable">_posts</span></span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure></p>
+<p>具备上述内容说明hexo博客我们离成功安装就差一步了，若需要博客能够正常运行，需要在terminal进入到mybolg文件夹下，执行<code>npm install</code>即可安装hexo博客运行所需要的所有的依赖，执行完后myblog目录下会多出一个<em>node_modules</em>,具体的文件结构如下：<br><figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── node_modules</span><br><span class="line">├── <span class="variable">_config</span>.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── <span class="variable">_drafts</span></span><br><span class="line">|   └── <span class="variable">_posts</span></span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure></p>
+<h2 id="Config-hexo"><a href="#Config-hexo" class="headerlink" title="Config hexo"></a>Config hexo</h2><h2 id="Themes-management"><a href="#Themes-management" class="headerlink" title="Themes management"></a>Themes management</h2><p>上述方式安装的hexo默认使用的是landspace的主题，有的小伙伴可能觉得主题太丑，想更换主题,操作也很简单，本文以当前Star数量最多的NexT主题的安装来说明Hexo的主题管理。</p>
+<h3 id="clone-主题至指定目录"><a href="#clone-主题至指定目录" class="headerlink" title="clone 主题至指定目录"></a>clone 主题至指定目录</h3><p>在Terminal终端执行如下命令将Next主题拷贝至 ${MY_BLOG_DIR}/themes/next目录下：<br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git<span class="variable">@github</span>.<span class="symbol">com:</span>theme-<span class="keyword">next</span>/hexo-theme-<span class="keyword">next</span>.git <span class="variable">$&#123;</span>MY_BLOG_DIR&#125;/themes/<span class="keyword">next</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="修改myblog根目录下配置"><a href="#修改myblog根目录下配置" class="headerlink" title="修改myblog根目录下配置"></a>修改myblog根目录下配置</h3><p>修改${MY_BLOG_DIR}/_config.yml文件的内容：<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https:<span class="comment">//hexo.io/plugins/</span></span><br><span class="line">## Themes: https:<span class="comment">//hexo.io/themes/</span></span><br><span class="line">### theme: landscape # 默认的主题</span><br><span class="line">theme: next ##新安装的主题，对应的目录位置为 ./themes/next</span><br></pre></td></tr></table></figure></p>
+<p>修改完当前配置后，terminal运行命令<code>hexo server</code>重启hexo,本地调试后即成功替换主题为NexT。使用上述步骤完成Hexo主题更换后发现并不是我们目前博客所使用的主题，原因是因为在主题文件目录${MY_BLOG<em>DIR}/themes/next下的__config.yml</em>中的schemes，需要进行修改，修改成如下格式即可：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> ---------------------------------------------------------------</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Scheme Settings</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> ---------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Schemes</span></span><br><span class="line"><span class="meta">#</span><span class="bash">scheme: Muse</span></span><br><span class="line">scheme: Mist</span><br><span class="line"><span class="meta">#</span><span class="bash">scheme: Pisces</span></span><br><span class="line"><span class="meta">#</span><span class="bash">scheme: Gemini</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="文章显示摘要设置"><a href="#文章显示摘要设置" class="headerlink" title="文章显示摘要设置"></a>文章显示摘要设置</h3><p>使用NexT主题后，发现所有的博客文章都是全文显示的，可不可每个文章只显示一句话或者固定长度的文字（即缩略），答案是显示固定长度文字是可以的，在主题文件目录${MY_BLOG<em>DIR}/themes/next下的__config.yml</em>修改<code>auto_excerpt</code>即可：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Automatically Excerpt. Not recommend.</span><br><span class="line"># Please use <span class="comment">&lt;!-- more --&gt;</span> in the post to control excerpt accurately.</span><br><span class="line">auto_excerpt:</span><br><span class="line">  enable: true  # 将默认的false改为true</span><br><span class="line">  length: 150   # 根据需要决定显示的字数，这里没有修改，默认150字</span><br></pre></td></tr></table></figure></p>
+<h3 id="Nav-设置"><a href="#Nav-设置" class="headerlink" title="Nav 设置"></a>Nav 设置</h3><p>使用NexT主题后，默认导航栏，有两个，主页和归档。我们会按照自己的需求添加相应的导航栏，自定义导航栏需要修改主题文件目录${MY_BLOG<em>DIR}/themes/next下的__config.yml</em>中的<code>menu</code>：<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash from link value (/archives -&gt; archives).</span></span><br><span class="line"><span class="comment"># Usage: `Key: /link/ || icon`</span></span><br><span class="line"><span class="comment"># Key is the name of menu item. If translate for this menu will find in languages - this translate will be loaded; if not - Key name will be used. Key is case-senstive.</span></span><br><span class="line"><span class="comment"># Value before `||` delimeter is the target link.</span></span><br><span class="line"><span class="comment"># Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.</span></span><br><span class="line">menu:</span><br><span class="line">  home: / || home</span><br><span class="line">  categories: /categories || th</span><br><span class="line">  archives: /archives || archive</span><br><span class="line">  tags: /tags || tags</span><br><span class="line">  about: about || user</span><br><span class="line">  #home: / || home</span><br><span class="line">  #about: /about/ || user</span><br><span class="line">  #tags: /tags/ || tags</span><br><span class="line">  #categories: /categories/ || th</span><br><span class="line">  #archives: /archives/ || archive</span><br><span class="line">  #schedule: /schedule/ || calendar</span><br></pre></td></tr></table></figure></p>
+<p>如上述代码，我们实现了导航栏中<code>首页|分类|标签|归档|关于</code>这五个按钮，完成配置文件的修改后需要在${MY_BLOG_DIR}/source/文件夹下创建 categories，tags，about文件夹， 并且在每个文件夹下创建 index.md文件，文件内容如下:<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">分类</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018</span><span class="bullet">-01</span><span class="bullet">-03</span> <span class="number">17</span><span class="string">:34:24</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">"categories"</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></p>
+<p>重启hexo后即可实现导航栏的成功添加。在解决menu这个问题时曾经发现几个坑，不注意的时候可能会踩到坑，希望记录下来和大家多多交流：</p>
+<blockquote>
+<ol>
+<li>导航栏可以成功显示配置的英文字母，但没有图标与之对应，发现这个问题后参考了默认的menu的配置，发现问题是 <code>home: / || home</code> 中的|| 和之后的内容没有加上导致的，通过这个可以判断出 <code>|| home</code>这个是导航栏图标的配置，需要根据自己的需求选择；</li>
+<li>语言问题，导航栏配置成功后发现语言一支不对，自己乱鼓捣了一遍，最后是修改 ${MY_BLOG_DIR}/_config.yml 中的 <code>language: zh-Hans</code> 搞定的，具体是不是这里还需要在确定一下</li>
+</ol>
+</blockquote>
+<h2 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h2><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="noopener">20分钟教你使用hexo搭建github博客</a><br><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方文档</a><br><a href="https://www.jianshu.com/p/d737c7fff867" target="_blank" rel="noopener">Hexo博客个性化及NexT主题配置</a><br><a href="https://www.jianshu.com/p/1fb65c61fa4a" target="_blank" rel="noopener">Hexo 主题设置</a><br><a href="http://blog.csdn.net/sugar_rainbow/article/details/57415705" target="_blank" rel="noopener">hexo生成博文插入图片</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Getting-Start/" rel="tag"># Getting Start</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/03/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/17/基于commons-pool实现池化连接客户端/" rel="prev" title="基于commons-pool实现池化连接客户端">
+                基于commons-pool实现池化连接客户端 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_tsina">微博</a>
+<a class="jiathis_button_googleplus">Google+</a>
+<a class="jiathis_button_twitter">Twitter</a>
+<a class="jiathis_button_fb">Facebook</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">dong lin</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#First-say-Hello-World"><span class="nav-number">1.</span> <span class="nav-text">First say Hello World</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#How-to-build-your-Hexo"><span class="nav-number">2.</span> <span class="nav-text">How to build your Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Prepare-work"><span class="nav-number">2.1.</span> <span class="nav-text">Prepare work</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Install-hexo-cli"><span class="nav-number">2.2.</span> <span class="nav-text">Install hexo-cli</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Init-blog-directory"><span class="nav-number">2.3.</span> <span class="nav-text">Init blog directory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Config-hexo"><span class="nav-number">2.4.</span> <span class="nav-text">Config hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Themes-management"><span class="nav-number">2.5.</span> <span class="nav-text">Themes management</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#clone-主题至指定目录"><span class="nav-number">2.5.1.</span> <span class="nav-text">clone 主题至指定目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改myblog根目录下配置"><span class="nav-number">2.5.2.</span> <span class="nav-text">修改myblog根目录下配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文章显示摘要设置"><span class="nav-number">2.5.3.</span> <span class="nav-text">文章显示摘要设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nav-设置"><span class="nav-number">2.5.4.</span> <span class="nav-text">Nav 设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RSS"><span class="nav-number">2.6.</span> <span class="nav-text">RSS</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-number">3.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">dong lin</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://donglin.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2018/01/04/Getting-Started-Build-your-Hexo/';
+          this.page.identifier = '2018/01/04/Getting-Started-Build-your-Hexo/';
+          this.page.title = 'Getting Started: Build your Hexo';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://donglin.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("XhhYxBh4qFsSW3Y9AvHybflK-gzGzoHsz", "kjWYrJUoDWSbOIacgsv0MrmX");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
