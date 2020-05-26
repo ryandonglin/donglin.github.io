@@ -51,7 +51,8 @@ public class StackFrame {
 	}
 }
 ```
-通过反编译类文件，查看到的反编译代码如下，其中指出 test方法中拘捕变量的
+通过反编译类文件，查看到的反编译代码如下，其中指出 test方法中局部变量的
+![](JVM原理初步/sf_local_variable_class.png)
 
 局部变量表中的变量分布如下:
 
